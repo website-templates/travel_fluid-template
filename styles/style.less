@@ -1,10 +1,10 @@
-@import "reset.less";
-@import "elements.less";   
+@import "../../../global/styles/reset.less";
+@import "../../../global/styles/elements.less";  
 
 /* =========================================================
    Custom styles
    ========================================================= */
-html, body{	 
+html, body{	
 	width: 100%;
 	height: 100%;
 }
@@ -55,23 +55,26 @@ a{
 			white-space: nowrap;
 		}
 			.nav_link{
+			display: inline-block;
 				margin-right: 35px;
 				font-size: 16px;
+				line-height: 1;
 				color: #676767;
-			}
-			.marked{
-				padding: 9px 13px;
-				border: 1px solid #1784d1;				
-				color:#fff;		
 				
-				.rounded(3px);
-				.linear-gradient(bottom, #2086e8, #37b2f8);
-				
-				&:hover{
-					text-decoration: none;
-					.linear-gradient(top, #2086e8, #37b2f8);
+				&.marked{
+					padding: 9px 13px;
+					border: 1px solid #1784d1;				
+					color:#fff;		
+					
+					.rounded(3px);
+					.linear-gradient(bottom, #2086e8, #37b2f8);
+					
+					&:hover{
+						text-decoration: none;
+						.linear-gradient(top, #2086e8, #37b2f8);
+					}
 				}
-			}
+			}	
 	.main{
 		padding-top: 70px;
 	}
@@ -79,7 +82,7 @@ a{
 			width: 100%;
 			min-height: 535px;
 			padding-top: 150px;
-			background: url("../img/bg.jpg") 0 0 no-repeat;
+			background: url("../img/bg.jpg") center 0 no-repeat;
 			
 			.bg-cover;
 		}
@@ -241,14 +244,14 @@ a{
 /* =========================================================
    Media queries
    ========================================================= */
-@media (max-width:640px){
+@media screen and (max-width:640px){
 	.logo, nav{
 		float: none;
 		margin: 0 auto;
 		white-space: normal;
 	}
 }
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
 	.info{
 		padding-top: 0;
 	}	

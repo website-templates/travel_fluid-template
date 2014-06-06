@@ -132,9 +132,9 @@ input[type=submit] {
   cursor: pointer;
 }
 /* =========================================================
-   orlovmax.com less elements library v1.0
+   orlovmax.com less elements library v1.1
    ===================================
-   More info at http://orlovmax.com/lab/lesselements
+   More info at https://github.com/orlovmax/less-elements
    ========================================================= */
 .hidentext {
   text-indent: 100%;
@@ -210,11 +210,13 @@ nav {
   white-space: nowrap;
 }
 .nav_link {
+  display: inline-block;
   margin-right: 35px;
   font-size: 16px;
+  line-height: 1;
   color: #676767;
 }
-.marked {
+.nav_link.marked {
   padding: 9px 13px;
   border: 1px solid #1784d1;
   color: #fff;
@@ -228,9 +230,9 @@ nav {
   background: -ms-linear-gradient(bottom, #2086e8, #37b2f8);
   background: -o-linear-gradient(bottom, #2086e8, #37b2f8);
   background: linear-gradient(bottom, #2086e8, #37b2f8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2086e8, endColorstr=#37b2f8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37b2f8', endColorstr='#2086e8', GradientType=0);
 }
-.marked:hover {
+.nav_link.marked:hover {
   text-decoration: none;
   background: #2086e8;
   background-image: -webkit-gradient(linear, top, from(#2086e8), to(#37b2f8));
@@ -239,7 +241,7 @@ nav {
   background: -ms-linear-gradient(top, #2086e8, #37b2f8);
   background: -o-linear-gradient(top, #2086e8, #37b2f8);
   background: linear-gradient(top, #2086e8, #37b2f8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2086e8, endColorstr=#37b2f8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37b2f8', endColorstr='#2086e8', GradientType=0);
 }
 .main {
   padding-top: 70px;
@@ -248,7 +250,7 @@ nav {
   width: 100%;
   min-height: 535px;
   padding-top: 150px;
-  background: url("../img/bg.jpg") 0 0 no-repeat;
+  background: url("../img/bg.jpg") center 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -283,7 +285,7 @@ nav {
   background: -ms-linear-gradient(top, #6dd157, #36af24);
   background: -o-linear-gradient(top, #6dd157, #36af24);
   background: linear-gradient(top, #6dd157, #36af24);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6dd157, endColorstr=#36af24);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36af24', endColorstr='#6dd157', GradientType=0);
   -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
@@ -297,7 +299,7 @@ nav {
   background: -ms-linear-gradient(bottom, #6dd157, #36af24);
   background: -o-linear-gradient(bottom, #6dd157, #36af24);
   background: linear-gradient(bottom, #6dd157, #36af24);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6dd157, endColorstr=#36af24);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36af24', endColorstr='#6dd157', GradientType=0);
 }
 .info {
   position: relative;
@@ -452,7 +454,7 @@ footer {
 /* =========================================================
    Media queries
    ========================================================= */
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .logo,
   nav {
     float: none;
@@ -460,7 +462,7 @@ footer {
     white-space: normal;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .info {
     padding-top: 0;
   }
