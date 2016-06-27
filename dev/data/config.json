@@ -1,0 +1,23 @@
+{
+	"site": {
+		"lang": "en",
+		"title": "Travel template",
+		"titleDelim": " | ",
+		"description": "Free travel website template",
+		"keywords": "html template, theme, freebie, opensource",
+		"url": "http://website-templates.github.io/charity_responsive-template"
+	},
+	"modules": {
+		"googleFonts": "http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic",
+		"bodyJs": false,
+		"headJs": false,
+		"customCss": true,
+		"noscriptCss": false,
+		"twitterCard": false,
+		"openGraph": false
+	},
+	"links": {
+		"twitterCardCreator": "===twittercard-creator-account===",
+		"twitterCardAccount": "===twittercard-main-account==="
+	}
+}

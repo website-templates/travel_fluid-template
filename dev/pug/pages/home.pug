@@ -1,0 +1,79 @@
+extends ../layouts/base
+
+block variables
+	- pageTitle = 'Home'
+	- pageDescription = 'Page-specific description'
+	- pageKeywords = 'Page-specific keywords'
+
+
+block body-content
+	header
+		.container
+			h1.logo
+				| Indo
+				span Tourism
+			nav
+				a.nav_link(href='#') Home
+				a.nav_link(href='#') About us
+				a.nav_link(href='#') Projects
+				a.nav_link.marked(href='#') Contact us
+	section.main
+		.promo
+			.container
+				h1.slogan
+					| I Like To Ask The Same Question
+					span Many Many Times
+				a.ask-button(href='#') Ok ask me
+		.info
+			.places
+				h2.places_title Places You Must Visit In Your Lifetime
+				a(href='#')
+					span.place.place-1
+					| Azheekal
+				a(href='#')
+					span.place.place-2
+					| Ooty
+				a(href='#')
+					span.place.place-3
+					| Munnar
+				a(href='#')
+					span.place.place-4
+					| Humpi
+				a(href='#')
+					span.place.place-5
+					| Kovalam
+				a(href='#')
+					span.place.place-6
+					| Kuttanad
+				a(href='#')
+					span.place.place-7
+					| Thenmala
+				a(href='#')
+					span.place.place-8
+					| Beach
+				a(href='#')
+					span.place.place-9
+					| Munnar
+				a(href='#')
+					span.place.place-10
+					| Punaloor
+			.container
+				h3.about
+					| We&rsquo;ve since expanded our life list to 43 sites around the world
+					br
+					| 43 Places to See Before You Die
+				.services
+					a(href='#')
+						span.service.sites
+						| Sites the world
+					a(href='#')
+						span.service.shopping
+						| Shopping
+					a(href='#')
+						span.service.photography
+						| Photography
+					a(href='#')
+						span.service.find-best
+						| Find the best
+	footer
+		.container Designed by cssauthor.com | Coded by orlovmax.com
