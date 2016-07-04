@@ -1,0 +1,67 @@
+////////////////////////////////////////
+// $Promo
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-promo_title: #fff
+$c-promo_btn_cl: #fff
+$c-promo_btn_bg-1: #6dd157
+$c-promo_btn_bg-2: #36af24
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".promo"
+
+#{$block}
+	width: 100%
+	min-height: 535px
+	padding: 150px 0 100px
+	background: url("../images/bg/promo.jpg") center 0 no-repeat
+	background-size: cover
+
+
+	// $Promo inner
+	&__inner
+		max-width: 1024px
+		margin: 0 auto
+		+clearfix
+
+
+	// $Promo title
+	&__title
+		font-size: 52px
+		font-weight: bold
+		color: $c-promo_title
+		text-transform: uppercase
+		text-shadow: 1px 1px 3px rgba(0,0,0,.5)
+
+		& span
+			display: block
+			padding-top: 10px
+			font-size: 48px
+
+
+	// $Promo button
+	&__button
+		display: inline-block
+		width: 275px
+		height: 60px
+		margin: 45px 0 20px
+		padding-top: 10px
+		font-size: 34px
+		font-weight: bold
+		color: $c-promo_btn_cl
+		color: $c-promo_btn_cl
+		color: $c-promo_btn_cl
+		border-radius: 5px
+		background: linear-gradient(to top, $c-promo_btn_bg-1, $c-promo_btn_bg-2)
+		box-shadow: 0 0 0 4px rgba(0,0,0,.2)
+
+		&:hover
+			text-decoration: none
+			background: linear-gradient(to bottom, $c-promo_btn_bg-1, $c-promo_btn_bg-2)

@@ -1,0 +1,57 @@
+////////////////////////////////////////
+// $Services
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-services_link_cl: #7e7c7c
+$c-services_logo_bg: #fff
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".services"
+
+#{$block}
+
+
+	// $Services link
+	&__link
+		display: inline-block
+		font-size: 16px
+		color: $c-services_link_cl
+
+
+	// $Services logo
+	&__logo
+		display: block
+		width: 135px
+		height: 135px
+		margin: 50px 35px 20px
+		background: $c-services_logo_bg url("../images/services-sprite.png") 0 0 no-repeat
+		border-radius: 70px
+		transition: all .5s ease
+
+		// $Services logo CONTEXT: $Services link STATE: hover
+		#{$block}__link:hover &
+			opacity: .5
+			transform: scale(.9)
+
+		// $Services logo MOD: sites
+		&_sites
+			background-position: 0 0
+
+		// $Services logo MOD: shopping
+		&_shopping
+			background-position: -130px 0
+
+		// $Services logo MOD: photography
+		&_photography
+			background-position: -265px 0
+
+		// $Services logo MOD: fine-best
+		&_find-best
+			background-position: -395px 0

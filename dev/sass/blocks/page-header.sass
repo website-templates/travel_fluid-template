@@ -1,0 +1,51 @@
+////////////////////////////////////////
+// $Page header
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-header_bg: #fff
+$c-page-header_logo-1_cl: #1298dd
+$c-page-header_logo-2_cl: #8d8d8d
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".page-header"
+
+#{$block}
+	position: absolute
+	width: 100%
+	min-height: 70px
+	z-index: 100
+	background-color: $c-page-header_bg
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.5)
+
+
+	// $Page header inner container
+	&__inner
+		max-width: 1024px
+		margin: 0 auto
+		+clearfix
+
+
+	// $Page header logo
+	&__logo
+		margin-left: 20px
+		float: left
+		font-size: 36px
+		line-height: 70px
+		font-weight: bold
+		color: $c-page-header_logo-1_cl
+
+		@media screen and (max-width:640px)
+			float: none
+			margin: 0 auto
+			white-space: normal
+
+		& span
+			font-size: 30px
+			color: $c-page-header_logo-2_cl

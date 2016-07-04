@@ -1,0 +1,53 @@
+////////////////////////////////////////
+// $Page navigation
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-nav_link_cl: #676767
+$c-page-nav_link_special_bd: #1784d1
+$c-page-nav_link_special_bg-1: #2086e8
+$c-page-nav_link_special_bg-2: #37b2f8
+$c-page-nav_link_special_cl: #fff
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".page-nav"
+
+#{$block}
+	float: right
+	line-height: 70px
+	white-space: nowrap
+
+	@media screen and (max-width:640px)
+		float: none
+		margin: 0 auto
+		white-space: normal
+
+
+	// $Page navigation link
+	&__link
+		display: inline-block
+		margin-right: 35px
+		font-size: 16px
+		line-height: 1
+		color: $c-page-nav_link_cl
+
+		// $Page navigation link STATE: highlighted
+		// $Page navigation link MOD: special link
+		&.is-highlighted,
+		&_special
+			padding: 9px 13px
+			border: 1px solid $c-page-nav_link_special_bd
+			color: $c-page-nav_link_special_cl
+			border-radius: 3px
+			background: linear-gradient(to bottom, $c-page-nav_link_special_bg-1, $c-page-nav_link_special_bg-2)
+			transition: all .5s
+
+			&:hover
+				text-decoration: none
+				background: linear-gradient(to top, $c-page-nav_link_special_bg-1, $c-page-nav_link_special_bg-2)

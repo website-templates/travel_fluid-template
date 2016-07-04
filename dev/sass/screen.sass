@@ -12,7 +12,6 @@
 //   $Fonts.............................Offline and online fonts
 //   $Reset.............................Reset defaults
 //   $Base..............................Some general styles
-//   $Sprite............................Spite mixin
 //
 // BLOCKS...............................Page components
 //   $Block name........................
@@ -45,8 +44,26 @@
 /// $BLOCKS
 ////////////////////////////////////////
 
-// $Imported syles
-@import import/style.scss
+// $Page header
+@import blocks/page-header
 
-// $Block name
-@import blocks/block-name
+// $Page navigation
+@import blocks/page-nav
+
+// $Page footer
+@import blocks/page-footer
+
+// $Page content
+@import blocks/page-content
+
+// $Promo
+@import blocks/promo
+
+// $Places
+@import blocks/places
+
+// $Services
+@import blocks/services
+
+// $Info
+@import blocks/info

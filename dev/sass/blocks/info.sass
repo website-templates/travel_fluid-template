@@ -1,0 +1,48 @@
+////////////////////////////////////////
+// $Info
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-info_bg: #ececec
+$c-info_content_cl: #7e7c7c
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".info"
+
+#{$block}
+	position: relative
+	width: 100%
+	min-height: 570px
+	padding: 210px 0 20px
+	background-color: $c-info_bg
+
+	@media screen and (max-width: 480px)
+		padding-top: 0
+
+
+	// $Info inner
+	&__inner
+		max-width: 1024px
+		margin: 0 auto
+		+clearfix
+
+
+	// $Info places
+	&__places
+
+
+	// $Info content
+	&__content
+		font-size: 26px
+		line-height: 1.5
+		color: $c-info_content_cl
+
+
+	// $Info services
+	&__services
