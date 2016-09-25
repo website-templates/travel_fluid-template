@@ -1,4 +1,4 @@
-# Free travel website template
+# Free travel website template - ARCHIVED
 
 Nice fluid website template, designed by [cssauthor](http://www.cssauthor.com/) and coded by [Maxim Orlov](https://github.com/orlovmax). 
 
