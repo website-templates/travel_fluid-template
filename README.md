@@ -1,6 +1,6 @@
 # Free travel website template - ARCHIVED
 
-Nice fluid website template, designed by [cssauthor](http://www.cssauthor.com/) and coded by [Maxim Orlov](https://github.com/orlovmax). 
+Nice fluid website template, designed by [cssauthor](http://www.cssauthor.com/) and coded by [Maxim Orlov](https://github.com/orlovmax).
 
 Demo: [http://website-templates.github.io/travel_fluid-template/](http://website-templates.github.io/travel_fluid-template/)
 
@@ -8,23 +8,29 @@ Demo: [http://website-templates.github.io/travel_fluid-template/](http://website
 Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk/)
 
 ## Contents
-* [Folder structure](#folder-and-file-structure)
-* [Requirements](#requirements)
+
+- [Folder and file structure](#folder-and-file-structure)
+- [Requirements:](#requirements)
     - [Editorconfig](#editorconfig)
-* [Site configuration](#site-configuration)
-* [Tasks](#tasks)
-    - [Start](#start)
+- [How to start](#how-to-start)
+- [Site configuration](#site-configuration)
+- [Tasks](#tasks)
+    - [Cleanup](#cleanup)
     - [Dev](#dev)
     - [Build](#build)
     - [Rebuild](#rebuild)
     - [Server](#server)
-* [Live reload](#live-reload)
-* [License](#license)
+    - [Sprite](#sprite)
+- [Live reload](#live-reload)
+- [License](#license)
 
 ## Folder and file structure
+
 ```
 ./
 ├── .editorconfig
+├── Gruntfile.js
+├── package.json
 ├── README.md
 |
 ├── grunt_tasks/                               * grunt tasks
@@ -34,15 +40,10 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
 │   |   └── aliases.js
 │   |
 |   └── task.js
-│
-├── Gruntfile.js
-├── package.json
 |
 ├── screenshots/                               * responsive test screenshots
 |
 ├── dev/                                       * site source
-|   ├── coffee/                                * coffee scripts
-|   │
 │   ├── images/                                * image sources
 |   │
 │   ├── pug/                                   * templates
@@ -52,12 +53,6 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
 |   │   ├── vendor/                            * third-party code
 |   │   ├── layouts/                           * page layouts
 |   │   └── pages/                             * main pages templates
-|   │
-│   ├── js/                                    * compiled and source js
-|   |   ├── vendor/                            * vendor scripts library
-|   |   ├── lib/                               * site scripts library
-|   │   ├── head.js                            * head scripts
-|   │   └── body.js                            * vendor scripts
 |   │
 |   ├── sass/                                  * sass preprocessor styles
 |   |   ├── blocks/                            * blocks library
@@ -84,64 +79,82 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
         ├── css/                               * minified styles
         |
         ├── images/                            * minified images
-        │
-        ├── js/                                * minified assembled js
         |
         └── fonts/                             * @font-face-ready webfonts
 
 ```
 
-## Requirements:
+## Requirements
+
 - [Node.js](http://nodejs.org/)
-- Build sytem: [Grunt](http://gruntjs.com/)
-- Optionally: [Editorconfig](http://editorconfig.org/)
+- Build sytem: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)
+- Optionally:
+  * [Editorconfig](http://editorconfig.org/)
+  * [Ruby](https://www.ruby-lang.org/en/) and [Ruby Sass](https://sass-lang.com/ruby-sass)
 
 #### Editorconfig
-This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+
+This project has an .editorconfig file at the root. It describes indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+
+## How to start
+
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to use [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins.
+
+Before start you need to have installed _npm_, _grunt_, _ruby_, and _ruby-sass_ globallly.
+
+**A few simple steps to start:**
+* Install dependencies from `package.json` by running: `npm install`.
+* Run tasks from the list below and start devevelopment!
+* Edit general settings in `dev/data/config.json` See [Site configuration](#site-configuration) section
 
 ## Site configuration
-This boilerplate use Pug templates with external data configs. 
+
+This boilerplate uses Pug templates with external data configs.
 Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
 
 ## Tasks
+
 Here comes groups of grunt tasks with some explanations
 
-#### Start 
-Install bower dependencies and place them to dev folders.
-Grunt: `grunt start`
+#### Cleanup
 
-* Install bower components
+Remove placeholders from work directories.
+Grunt: `grunt cleanup`
+
 * Remove gitkeep files
 
 #### Dev
+
 Dev task with static server.
 Grunt: `grunt dev`
 
-* Compile sass stylesheets
+* Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
 * Compile Pug templates
 * Sync helpers and other assets
 * Sync images
-* Run BrowserSync static server with live reload using 
+* Run BrowserSync static server with live reload using
 * Watch for changes and run dev task
 
 
-#### Build 
+#### Build
+
 Build task.
 Grunt: `grunt build`
 
 * Minify images
 * Minify stylesheets
 * Minify html
-* Run BrowserSync static server 
+* Run BrowserSync static server
 
 
-#### Rebuild 
+#### Rebuild
+
 Regenerate and build project by running all tasks.
 Grunt: `grunt rebuild`
 
-* Compile sass stylesheets
+* Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
 * Compile Pug templates
@@ -151,14 +164,19 @@ Grunt: `grunt rebuild`
 * Minify stylesheets
 * Minify html
 
-#### Server 
+
+#### Server
+
 Run server without watching for changes.
 Grunt: `grunt server`
 
 * Run BrowserSync static server
 
-## Live reload 
+
+## Live reload
+
 This project uses BrowserSync as static server with enabled and configured live reload option.
 
 ## License
+
 [MIT](https://github.com/website-templates/travel_fluid-template/blob/master/LICENSE.md)
